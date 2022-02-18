@@ -1,12 +1,23 @@
 <div class="banner mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);">
-  <div class="container">
-    <h1> Here are my movies lists!</h1>
-    <p>So many good movies.</p>
-    <%= link_to 'Create a new list', new_list_path, class: "btn btn-light btn-header" %>
+  <div class="container d-flex align-items justify-content-between">
+    <div class="left">
+      <h1> Here are my movies lists!</h1>
+      <p>So many good movies.</p>
+      <%#= link_to 'Create a new list', new_list_path, class: "btn btn-light btn-header" %>
+    </div>
+
+    <div class="right">
+      <%= simple_form_for @list do |f| %>
+      <%= f.input :name %>
+      <div class="banner-btn">
+        <%= f.button :submit %></div>
+      </div>
+  <% end %>
+    </div>
   </div>
 </div>
-
-
+<%# , data: { placeholder: 'Name new list'} %>
+<%# , prompt: 'new' %>
 
 <div class="container mb-5">
   <div class="row mt-5 d-flex">

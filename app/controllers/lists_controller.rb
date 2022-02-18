@@ -1,6 +1,7 @@
 class ListsController < ApplicationController
   def index
     @lists = List.all
+    @list = List.new
   end
 
   def show
@@ -14,12 +15,16 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-
     if @list.save
-      redirect_to lists_path
+      redirect_to list_path(@list)
     else
-      render :new
+      redirect_to lists_path
     end
+    #   if @list.save
+    #     redirect_to lists_path
+    #   else
+    #     render :new
+    #   end
   end
 
   def destroy

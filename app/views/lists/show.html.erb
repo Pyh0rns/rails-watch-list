@@ -21,9 +21,9 @@
       <div class="card-product-infos">
         <h2><%= bookmark.movie.title %> </h2>
         <p><%= bookmark.comment %></p>
-        <%= button_to 'delete', bookmark_path(bookmark), method: :delete, class: "suppr-btn", data: { confirm: "Are you sure you want to remove" } %>
-          <%#= <i class="fas fa-trash-alt"></i> %>
-        <%# end %>
+        <%= link_to bookmark_path(bookmark), method: :delete, class: "suppr-btn", data: { confirm: "Are you sure you want to remove" } do %>
+           <i class="fas fa-trash-alt"></i>
+        <% end %>
       </div>
     </div>
   <% end %>

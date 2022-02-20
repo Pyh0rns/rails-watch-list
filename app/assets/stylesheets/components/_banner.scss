@@ -27,6 +27,26 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
+.notification {
+  // A TERMINER !!
+  background-color: whitesmoke;
+  width: 250px;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-top: 70px;
+  padding: 8px;
+
+  p {
+    font-size: 16px;
+    color: black;
+  }
+}
+
+
+
+
+
+
 .banner_small {
   background-size: cover;
   background-position: center;
